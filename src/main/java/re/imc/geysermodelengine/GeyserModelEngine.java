@@ -64,15 +64,15 @@ public final class GeyserModelEngine extends JavaPlugin {
     private ScheduledExecutorService scheduler;
     private ScheduledFuture<?> updateTask;
 
-    @Override
-    public void onLoad() {
-        PacketEvents.setAPI(SpigotPacketEventsBuilder.build(this));
-        PacketEvents.getAPI().load();
-    }
+//    @Override
+//    public void onLoad() {
+//        PacketEvents.setAPI(SpigotPacketEventsBuilder.build(this));
+//        PacketEvents.getAPI().load();
+//    }
 
     @Override
     public void onEnable() {
-        PacketEvents.getAPI().init();
+//        PacketEvents.getAPI().init();
         PacketEvents.getAPI().getEventManager().registerListener(new MountPacketListener(), PacketListenerPriority.NORMAL);
         /*
         scheduler.scheduleAtFixedRate(() -> {
@@ -140,7 +140,7 @@ public final class GeyserModelEngine extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        PacketEvents.getAPI().terminate();
+//        PacketEvents.getAPI().terminate();
         for (Map<ActiveModel, ModelEntity> entities : ModelEntity.ENTITIES.values()) {
             entities.forEach((model, modelEntity) -> {
                 modelEntity.getEntity().remove();

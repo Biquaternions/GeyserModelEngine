@@ -1,5 +1,5 @@
 name: GeyserModelEngine
-version: '${project.version}'
+version: $version
 main: re.imc.geysermodelengine.GeyserModelEngine
 authors:
   - zimzaza4
@@ -8,6 +8,7 @@ api-version: '1.19'
 depend:
   - ModelEngine
   - floodgate
+  - packetevents
 commands:
   geysermodelengine:
     usage: /geysermodelengine reload
